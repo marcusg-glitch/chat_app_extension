@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Mock Chat App",
+    "description": "A simple mock chat application as a Chrome extension.",
+    "version": "1.0",
+    "action": {
+      "default_popup": "dist/index.html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      }
+    },
+    "permissions": [
+      "storage"
+    ],
+    "host_permissions": [
+      "https://*.firebaseio.com/*"
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["dist/index.html", "dist/bundle.js", "dist/styles.css"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
